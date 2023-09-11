@@ -10,6 +10,7 @@ let [tulos, setTulos] = useState(0);
 let [vahvuus, setVahvuus] = useState(0);
 let [koko, setKoko] = useState(0);
 
+const resultClassName = tulos > 0.5 ? 'over-limit' : '';
 
 //const numbers = [1,2,3,4,5,6]
 const numbers = new Array(24).fill(null).map((_,i) => i+1)
@@ -87,7 +88,7 @@ function Laske(e) {
         <input type="radio" name="sukupuoli" value="Muu" checked={sukupuoli === 'Muu'} onChange={() => setSukupuoli('Muu')}/><label>En halua kertoa.</label>
         </div>
         <div>
-        <output>Tulos:  {tulos.toFixed(2)} Promillea.</output>
+        <output className={resultClassName}>Tulos:  {tulos.toFixed(2)} Promillea.</output>
         </div>
         <button>Laske!</button>
       </form>
