@@ -1,0 +1,57 @@
+  /* Muotoilussa on käytetty apuna ChatGPT */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  input[type="number"],
+  select,
+  input[type="radio"] {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #0077cc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0055aa;
+  }
+  
+  output {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 16px;
+  }
+  

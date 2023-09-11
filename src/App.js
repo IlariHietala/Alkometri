@@ -8,6 +8,7 @@ let [sukupuoli, setSukupuoli] = useState('');
 let [aika, setAika] = useState(0);
 let [tulos, setTulos] = useState(0);
 let [vahvuus, setVahvuus] = useState(0);
+let [koko, setKoko] = useState(0);
 
 
 //const numbers = [1,2,3,4,5,6]
@@ -15,7 +16,7 @@ const numbers = new Array(24).fill(null).map((_,i) => i+1)
 
 function Laske(e) {
   e.preventDefault()
-  const litroja = annokset * 0.33;
+  const litroja = annokset * koko;
   let grammoja = litroja * 8 * vahvuus;
   const selviäminen = paino / 10;
  let grammoja2 = grammoja - (selviäminen * aika);
@@ -61,6 +62,13 @@ function Laske(e) {
               })
             }
           </select>
+        </div>
+        <div>
+        <label>Annoskoko:</label>
+        <input type="radio" name="koko" value="0.04" checked={koko === '0.04'} onChange={() => setKoko('0.04')} /><label>40ml</label>
+        <input type="radio" name="koko" value="0.33" checked={koko === '0.33'} onChange={() => setKoko('0.33')} /><label>330ml</label>
+        <input type="radio" name="koko" value="0.50" checked={koko === '0.50'} onChange={() => setKoko('0.50')} /><label>500ml</label>
+        <input type="radio" name="koko" value="0.568" checked={koko === '0.568'} onChange={() => setKoko('0.568')} /><label>568ml</label>
         </div>
         <div>
           <label>Aika:</label>
